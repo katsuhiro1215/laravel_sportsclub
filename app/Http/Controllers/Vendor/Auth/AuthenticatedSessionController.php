@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Vendor\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
@@ -17,7 +17,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('auth.login');
+        // $notification = array(
+        //     'message' => 'ログインに成功しました。',
+        //     'alert-type' => 'success'
+        // );
+
+        return view('vendor.auth.login');
     }
 
     /**
@@ -29,7 +34,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended(RouteServiceProvider::VENDOR_HOME);
     }
 
     /**
@@ -37,12 +42,17 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
-        Auth::guard('web')->logout();
+        Auth::guard('vendor')->logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        $notification = array(
+            'message' => 'ログアウトに成功しました。',
+            'alert-type' => 'info'
+        );
+
+        return redirect('/vendor/login')->with($notification);
     }
 }

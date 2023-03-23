@@ -14,18 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.welcome');
-});
-
+// Vendor Top Route
 Route::get('/dashboard', function () {
-    return view('user.dashboard');
-})->middleware(['auth:users', 'verified'])->name('dashboard');
+    return view('vendor.index');
+})->middleware(['auth:vendor', 'verified'])->name('index');
 
-Route::middleware('auth:users')->group(function () {
+// Vendor Profile Route
+Route::middleware('auth:vendor')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__.'/vendor_auth.php';

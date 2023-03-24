@@ -15,12 +15,42 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('usertype')->nullable();
+            $table->string('username');
+            $table->string('lastname')->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('lastname_kana')->nullable();
+            $table->string('firstname_kana')->nullable();
+            
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            $table->text('profile_photo_path')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('mobile_number')->nullable();
+
+            $table->date('birth')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('postcode')->nullable();
+            $table->string('address1')->nullable();
+            $table->string('address2')->nullable();
+            $table->string('address3')->nullable();
+            $table->string('religion')->nullable();
+            $table->string('father_name')->nullable();
+            $table->string('father_phone_number')->nullable();
+            $table->string('mother_name')->nullable();
+            $table->string('mother_phone_number')->nullable();
+            
+            $table->string('id_no')->nullable();
+            $table->string('code')->nullable();
+            $table->string('role')->nullable();
+            $table->date('join_date')->nullable();
+            $table->integer('designation_id')->nullable();
+
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

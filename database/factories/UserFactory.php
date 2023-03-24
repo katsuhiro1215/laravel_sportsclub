@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -10,6 +11,7 @@ use Illuminate\Support\Str;
  */
 class UserFactory extends Factory
 {
+    protected $model = User::class;
     /**
      * Define the model's default state.
      *
@@ -18,10 +20,28 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->name(),
+            'usertype' => fake()->randomElement(['Customer', 'Member']),
+            'username' => fake()->userName(),
+            'lastname' => fake()->lastName(),
+            'firstname' => fake()->firstName(),
+            'lastname_kana' => fake()->lastKanaName(),
+            'firstname_kana' => fake()->firstKanaName(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'phone_number' => fake()->phoneNumber(),
+            'mobile_number' => fake()->phoneNumber(),
+            'birth' => fake()->dateTimeBetween('2005-01-01', '2020-12-31'),
+            'gender' => fake()->randomElement(['男', '女']),
+            'postcode' => fake()->postcode(),
+            'address1' => fake()->prefecture(),
+            'address2' => fake()->city(),
+            'address3' => fake()->streetName(),
+            'religion' => fake()->randomElement(['イスラム教', 'キリスト教', '仏教', 'ヒンドゥー教']),
+            'father_name' => fake()->name(),
+            'father_phone_number' => fake()->phoneNumber(),
+            'mother_name' => fake()->name(),
+            'mother_phone_number' => fake()->phoneNumber(),
             'remember_token' => Str::random(10),
         ];
     }

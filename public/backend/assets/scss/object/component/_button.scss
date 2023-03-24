@@ -1,0 +1,706 @@
+/* ----- Button Component ----- */
+// Button Color Custom
+.btn-red {
+  color: #fff;
+  background-color: var(--red);
+  border-color: var(--red);
+  box-shadow: none;
+}
+.btn-blue {
+  color: #fff;
+  background-color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: none;
+}
+.btn-green {
+  color: #fff;
+  background-color: var(--green);
+  border-color: var(--green);
+  box-shadow: none;
+}
+.btn-yellow {
+  color: #383838;
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+  box-shadow: none;
+}
+.btn-magenta {
+  color: #fff;
+  background-color: var(--magenta);
+  border-color: var(--magenta);
+  box-shadow: none;
+}
+.btn-cyan {
+  color: #383838;
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: none;
+}
+.btn-silver {
+  color: #fff;
+  background-color: var(--silver);
+  border-color: var(--silver);
+  box-shadow: none;
+}
+.btn-lavender {
+  color: #383838;
+  background-color: var(--lavender);
+  border-color: var(--lavender);
+  box-shadow: none;
+}
+.btn-royalblue {
+  color: #fff;
+  background-color: var(--royalblue);
+  border-color: var(--royalblue);
+  box-shadow: none;
+}
+.btn-navy {
+  color: #fff;
+  background-color: var(--navy);
+  border-color: var(--navy);
+  box-shadow: none;
+}
+.btn-teal {
+  color: #fff;
+  background-color: var(--teal);
+  border-color: var(--teal);
+  box-shadow: none;
+}
+.btn-aquamarine {
+  color: #383838;
+  background-color: var(--aquamarine);
+  border-color: var(--aquamarine);
+  box-shadow: none;
+}
+.btn-lime {
+  color: #383838;
+  background-color: var(--lime);
+  border-color: var(--lime);
+  box-shadow: none;
+}
+.btn-olive {
+  color: #fff;
+  background-color: var(--olive);
+  border-color: var(--olive);
+  box-shadow: none;
+}
+.btn-beige {
+  color: #383838;
+  background-color: var(--beige);
+  border-color: var(--beige);
+  box-shadow: none;
+}
+.btn-gold {
+  color: #383838;
+  background-color: var(--gold);
+  border-color: var(--gold);
+  box-shadow: none;
+}
+.btn-orange {
+  color: #fff;
+  background-color: var(--orange);
+  border-color: var(--orange);
+  box-shadow: none;
+}
+.btn-maroon {
+  color: #fff;
+  background-color: var(--maroon);
+  border-color: var(--maroon);
+  box-shadow: none;
+}
+.btn-brown {
+  color: #fff;
+  background-color: var(--brown);
+  border-color: var(--brown);
+  box-shadow: none;
+}
+.btn-crimson {
+  color: #fff;
+  background-color: var(--crimson);
+  border-color: var(--crimson);
+  box-shadow: none;
+}
+.btn-pink {
+  color: #383838;
+  background-color: var(--pink);
+  border-color: var(--pink);
+  box-shadow: none;
+}
+.btn-violet {
+  color: #fff;
+  background-color: var(--violet);
+  border-color: var(--violet);
+  box-shadow: none;
+}
+.btn-purple {
+  color: #fff;
+  background-color: var(--purple);
+  border-color: var(--purple);
+  box-shadow: none;
+}
+.btn-indigo {
+  color: #fff;
+  background-color: var(--indigo);
+  border-color: var(--indigo);
+  box-shadow: none;
+}
+// Button Color Custom hover
+.btn:hover.btn-red {
+  background-color: var(--red);
+  opacity: 0.7;
+}
+.btn:hover.btn-blue {
+  background-color: var(--blue);
+  opacity: 0.7;
+}
+.btn:hover.btn-green {
+  background-color: var(--green);
+  opacity: 0.7;
+}
+.btn:hover.btn-yellow {
+  background-color: var(--yellow);
+  opacity: 0.7;
+}
+.btn:hover.btn-magenta {
+  background-color: var(--magenta);
+  opacity: 0.7;
+}
+.btn:hover.btn-cyan {
+  background-color: var(--cyan);
+  opacity: 0.7;
+}
+.btn:hover.btn-silver {
+  background-color: var(--silver);
+  opacity: 0.7;
+}
+.btn:hover.btn-lavender {
+  background-color: var(--lavender);
+  opacity: 0.7;
+}
+.btn:hover.btn-royalblue {
+  background-color: var(--royalblue);
+  opacity: 0.7;
+}
+.btn:hover.btn-navy {
+  background-color: var(--navy);
+  opacity: 0.7;
+}
+.btn:hover.btn-teal {
+  background-color: var(--teal);
+  opacity: 0.7;
+}
+.btn:hover.btn-aquamarine {
+  background-color: var(--aquamarine);
+  opacity: 0.7;
+}
+.btn:hover.btn-lime {
+  background-color: var(--lime);
+  opacity: 0.7;
+}
+.btn:hover.btn-olive {
+  background-color: var(--olive);
+  opacity: 0.7;
+}
+.btn:hover.btn-beige {
+  background-color: var(--beige);
+  opacity: 0.7;
+}
+.btn:hover.btn-gold {
+  background-color: var(--gold);
+  opacity: 0.7;
+}
+.btn:hover.btn-orange {
+  background-color: var(--orange);
+  opacity: 0.7;
+}
+.btn:hover.btn-maroon {
+  background-color: var(--maroon);
+  opacity: 0.7;
+}
+.btn:hover.btn-brown {
+  background-color: var(--brown);
+  opacity: 0.7;
+}
+.btn:hover.btn-crimson {
+  background-color: var(--crimson);
+  opacity: 0.7;
+}
+.btn:hover.btn-pink {
+  background-color: var(--pink);
+  opacity: 0.7;
+}
+.btn:hover.btn-violet {
+  background-color: var(--violet);
+  opacity: 0.7;
+}
+.btn:hover.btn-purple {
+  background-color: var(--purple);
+  opacity: 0.7;
+}
+.btn:hover.btn-indigo {
+  background-color: var(--indigo);
+  opacity: 0.7;
+}
+// Button Color Custom Outline
+.btn-outline-red {
+  color: var(--red);
+  border-color: var(--red);
+}
+.btn-outline-blue {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.btn-outline-green {
+  color: var(--green);
+  border-color: var(--green);
+}
+.btn-outline-yellow {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+.btn-outline-magenta {
+  color: var(--magenta);
+  border-color: var(--magenta);
+}
+.btn-outline-cyan {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+.btn-outline-silver {
+  color: var(--silver);
+  border-color: var(--silver);
+}
+.btn-outline-lavender {
+  color: var(--lavender);
+  border-color: var(--lavender);
+}
+.btn-outline-royalblue {
+  color: var(--royalblue);
+  border-color: var(--royalblue);
+}
+.btn-outline-navy {
+  color: var(--navy);
+  border-color: var(--navy);
+}
+.btn-outline-teal {
+  color: var(--teal);
+  border-color: var(--teal);
+}
+.btn-outline-aquamarine {
+  color: var(--aquamarine);
+  border-color: var(--aquamarine);
+}
+.btn-outline-lime {
+  color: var(--lime);
+  border-color: var(--lime);
+}
+.btn-outline-olive {
+  color: var(--olive);
+  border-color: var(--olive);
+}
+.btn-outline-beige {
+  color: var(--beige);
+  border-color: var(--beige);
+}
+.btn-outline-gold {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.btn-outline-orange {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+.btn-outline-orange {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+.btn-outline-maroon {
+  color: var(--maroon);
+  border-color: var(--maroon);
+}
+.btn-outline-brown {
+  color: var(--brown);
+  border-color: var(--brown);
+}
+.btn-outline-crimson {
+  color: var(--crimson);
+  border-color: var(--crimson);
+}
+.btn-outline-pink {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+.btn-outline-violet {
+  color: var(--violet);
+  border-color: var(--violet);
+}
+.btn-outline-purple {
+  color: var(--purple);
+  border-color: var(--purple);
+}
+.btn-outline-indigo {
+  color: var(--indigo);
+  border-color: var(--indigo);
+}
+// Button Color Custom Outline Hover
+.btn:hover.btn-outline-red {
+  color: #fff;
+  background-color: var(--red);
+  border-color: var(--red);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-blue {
+  color: #fff;
+  background-color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-green {
+  color: #fff;
+  background-color: var(--green);
+  border-color: var(--green);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-yellow {
+  color: #383838;
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-magenta {
+  color: #fff;
+  background-color: var(--magenta);
+  border-color: var(--magenta);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-cyan {
+  color: #383838;
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-silver {
+  color: #fff;
+  background-color: var(--silver);
+  border-color: var(--silver);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-lavender {
+  color: #383838;
+  background-color: var(--lavender);
+  border-color: var(--lavender);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-royalblue {
+  color: #fff;
+  background-color: var(--royalblue);
+  border-color: var(--royalblue);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-navy {
+  color: #fff;
+  background-color: var(--navy);
+  border-color: var(--navy);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-teal {
+  color: #fff;
+  background-color: var(--teal);
+  border-color: var(--teal);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-aquamarine {
+  color: #383838;
+  background-color: var(--aquamarine);
+  border-color: var(--aquamarine);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-lime {
+  color: #383838;
+  background-color: var(--lime);
+  border-color: var(--lime);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-olive {
+  color: #fff;
+  background-color: var(--olive);
+  border-color: var(--olive);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-beige {
+  color: #383838;
+  background-color: var(--beige);
+  border-color: var(--beige);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-gold {
+  color: #383838;
+  background-color: var(--gold);
+  border-color: var(--gold);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-orange {
+  color: #fff;
+  background-color: var(--orange);
+  border-color: var(--orange);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-maroon {
+  color: #fff;
+  background-color: var(--maroon);
+  border-color: var(--maroon);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-brown {
+  color: #fff;
+  background-color: var(--brown);
+  border-color: var(--brown);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-crimson {
+  color: #fff;
+  background-color: var(--crimson);
+  border-color: var(--crimson);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-pink {
+  color: #383838;
+  background-color: var(--pink);
+  border-color: var(--pink);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-violet {
+  color: #fff;
+  background-color: var(--violet);
+  border-color: var(--violet);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-purple {
+  color: #fff;
+  background-color: var(--purple);
+  border-color: var(--purple);
+  box-shadow: none;
+}
+.btn:hover.btn-outline-indigo {
+  color: #fff;
+  background-color: var(--indigo);
+  border-color: var(--indigo);
+  box-shadow: none;
+}
+// Button Color Custom Gradient
+.btn-gradient-primary {
+  background: #007bff linear-gradient(180deg, #268fff, #007bff) repeat-x !important;
+  color: #fff;
+}
+.btn-gradient-secondary {
+  background: #6c757d linear-gradient(180deg, #828a91, #6c757d) repeat-x !important;
+  color: #fff;
+}
+.btn-gradient-success {
+  background: #28a745 linear-gradient(180deg, #48b461, #28a745) repeat-x !important;
+  color: #fff;
+}
+.btn-gradient-info {
+  background: #17a2b8 linear-gradient(180deg, #3ab0c3, #17a2b8) repeat-x !important;
+  color: #fff;
+}
+.btn-gradient-warning {
+  background: #ffc107 linear-gradient(180deg, #ffca2c, #ffc107) repeat-x !important;
+  color: #1f2d3d;
+}
+.btn-gradient-danger {
+  background: #dc3545 linear-gradient(180deg, #e15361, #dc3545) repeat-x !important;
+  color: #fff;
+}
+.btn:hover.btn-gradient-primary {
+  background: #007bff linear-gradient(180deg, #267fde, #0069d9) repeat-x !important;
+  border-color: #0062cc;
+  color: #ececec;
+}
+.btn:hover.btn-gradient-secondary {
+  background: #6c757d linear-gradient(180deg, #73797f, #5a6268) repeat-x !important;
+  border-color: #545b62;
+  color: #ececec;
+}
+.btn:hover.btn-gradient-success {
+  background: #28a745 linear-gradient(180deg, #429a56, #218838) repeat-x !important;
+  border-color: #1e7e34;
+  color: #ececec;
+}
+.btn:hover.btn-gradient-info {
+  background: #17a2b8 linear-gradient(180deg, #3697a6, #138496) repeat-x !important;
+  border-color: #117a8b;
+  color: #ececec;
+}
+.btn:hover.btn-gradient-warning {
+  background: #ffc107 linear-gradient(180deg, #e4b526, #e0a800) repeat-x !important;
+  border-color: #d39e00;
+  color: #121a24;
+}
+.btn:hover.btn-gradient-danger {
+  background: #dc3545 linear-gradient(180deg, #d04451, #c82333) repeat-x !important;
+  border-color: #bd2130;
+  color: #ececec;
+}
+// Primary
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn-default {
+  background-color: #f8f9fa;
+  border-color: #ddd;
+  color: #444;
+}
+.btn-xs {
+  padding: 0.125rem 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  border-radius: 0.15rem;
+}
+.btn-xl {
+  padding: 1.25rem 0.625rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  border-radius: 0.625rem;
+}
+.btn-flat {
+  border-radius: 0;
+  border-width: 1px;
+  box-shadow: none;
+}
+// Rounded
+.btn-rounded {
+  border-radius: 50px;
+}
+// Button with Icons
+.btn i {
+  font-size: 1.2rem;
+}
+.btn-xl i {
+  font-size: 1.4rem;
+}
+.btn-lg i {
+  font-size: 1.3rem;
+}
+.btn-sm i {
+  font-size: 1.1rem;
+}
+.btn-xs i {
+  font-size: 1rem;
+}
+// Button Circle
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  border-radius: 100% !important;
+  i {
+    font-size: 1.2rem;
+  }
+}
+.btn-circle-xl {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
+  border-radius: 100% !important;
+  i {
+    font-size: 1.6rem;
+  }
+}
+.btn-circle-lg {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  border-radius: 100% !important;
+  i {
+    font-size: 1.4rem;
+  }
+}
+.btn-circle-sm {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  border-radius: 100% !important;
+  i {
+    font-size: 1.0rem;
+  }
+}
+.btn-circle-xs {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0;
+  border-radius: 100% !important;
+  i {
+    font-size: 0.8rem;
+  }
+}
+// Social Button
+.btn-social-icon {
+  i {
+    font-size: 2.0rem;
+    color: #fff;
+  }
+  &.btn-facebook {
+    background-color: #4167b1;
+  }
+  &.btn-twitter {
+    background-color: #1ca1f2;
+  }
+  &.btn-instagram {
+    background-color: #d93078;
+  }
+  &.btn-youtube {
+    background-color: #c4302b;
+  }
+  &.btn-line {
+    background-color: #00b600;
+  }
+  &.btn-pocket {
+    background-color: #ee3e56;
+  }
+  &.btn-pinterest {
+    background-color: #b21c23;
+  }
+  &.btn-linkedln {
+    background-color: #0077b4;
+  }
+  &.btn-feedly {
+    background-color: #71c45b;
+  }
+}
+// Application Button
+.btn-app {
+  border-radius: 3px;
+  // color: #fff;
+  font-size: 12px;
+  height: 60px;
+  margin: 0 0 10px 10px;
+  min-width: 80px;
+  padding: 15px 5px;
+  position: relative;
+  text-align: center;
+}
+.btn-app > .fa,
+.btn-app > .fab,
+.btn-app > .fad,
+.btn-app > .fal,
+.btn-app > .far,
+.btn-app > .fas,
+.btn-app > .ion,
+.btn-app > .svg-inline--fa {
+  display: block;
+  font-size: 2.0rem;
+}
+.btn-app > .badge {
+  font-size: 10px;
+  font-weight: 400;
+  position: absolute;
+  right: -10px;
+  top: -3px;
+}

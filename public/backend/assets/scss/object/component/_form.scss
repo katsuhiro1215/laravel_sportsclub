@@ -1,0 +1,195 @@
+.form-label,
+.form-control,
+.form-select {
+  font-size: 1.4rem;
+}
+
+.ck-content {
+  min-height: 500px;
+}
+
+/* ---------- Login Register ForgetPassword ---------- */
+.page-login,
+.page-register,
+.page-forgetpassword {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  &__img-wrapper {
+    position: relative;
+    margin: 0;
+    padding:0;
+    width: 50%;
+    height: 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(225deg, #e91e63, #03a9f4);
+      z-index: 1;
+      mix-blend-mode: screen;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.form-box {
+  width: 50%;
+  h2 {
+    color: #607d8b;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ff4584;
+    display: inline-block;
+    letter-spacing: 1px;
+  }
+  .input-group {
+    margin-bottom: 20px;
+  }
+  .form-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607d8b;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .form-control {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    border-radius: 30px;
+    box-sizing: border-box;
+  }
+  .remember {
+    margin-bottom: 10px;
+    color: #607d8b;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  button.form-control {
+    display: block;
+    width: 100%;
+    background-color: #ff4584;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      background-color: #f53677;
+    }
+  }
+  p {
+    color: #607d8b;
+  }
+  a {
+    color: #ff4584;
+  }
+  h3 {
+    color: #607d8b;
+    text-align: center;
+    margin: 80px 0 10px;
+    font-weight: 500;
+  }
+  .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-item {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #607d8b;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    &:hover {
+      background-color: #ff4584;
+    }
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4.0rem;
+      transform: scale(0.5);
+      filter: invert(1);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-login__img-wrapper,
+  .page-register__img-wrapper,
+  .page-forgetpassword__img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .page-login__content,
+  .page-register__content,
+  .page-forgetpassword__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .form-box {
+    width: 100%;
+    padding: 40px;
+    background: rgb(255 255 255 / 0.9);
+    margin: 50px;
+  }
+  h3 {
+    margin: 30px 0 10px;
+  }
+}
+
+// Profile
+.profile-user-img {
+  border: 3px solid #adb5bd;
+  margin: 0 auto;
+  padding: 3px;
+  width: 100px;
+}
+
+.img-circle {
+  border-radius: 50%;
+}

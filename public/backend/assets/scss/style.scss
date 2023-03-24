@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+
+/* -------------------------------- */
+/* ---------- Foundation ---------- */
+/* -------------------------------- */
+@use "foundation/variable";
+@use "foundation/base";
+
+/* ---------------------------- */
+/* ---------- Layout ---------- */
+/* ---------------------------- */
+@use "layout/wrapper";
+@use "layout/header";
+@use "layout/sidebar";
+@use "layout/controle-sidebar";
+@use "layout/main";
+@use "layout/footer";
+
+/* ---------------------------- */
+/* ---------- Object ---------- */
+/* ---------------------------- */
+/* ---------- Component ---------- */
+@use "object/component/alert";
+@use "object/component/box";
+@use "object/component/breadcrumb";
+@use "object/component/button";
+@use "object/component/calendar";
+@use "object/component/card";
+@use "object/component/dropdown";
+@use "object/component/form";
+@use "object/component/loading";
+@use "object/component/table";
+@use "object/component/styleswitcher";
+
+/* ---------- Project ---------- */
+@use "object/project/profile";
+@use "object/project/ecommerce";
+@use "object/project/login";
+@use "object/project/register";
+@use "object/project/error";

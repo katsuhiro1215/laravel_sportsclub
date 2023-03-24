@@ -1,0 +1,30 @@
+// Main Contents
+.l-main {
+  padding-left: 240px;
+  background-color: rgb(240,240,241);
+  min-height: 100vh;
+  transition: all 0.5s;
+  z-index: 80;
+  &.active {
+    padding-left: 80px;
+  }
+}
+
+.main-contents,
+.content-header,
+.content-body,
+.content-footer {
+  position: relative;
+}
+
+.content-header {
+  &__title {
+    margin: 0;
+  }
+}
+
+.content-body {
+  &__title {
+    margin: 0;
+  }
+}

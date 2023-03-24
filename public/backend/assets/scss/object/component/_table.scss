@@ -1,0 +1,18 @@
+.table {
+  font-size: 1.6rem;
+  vertical-align: middle;
+  img {
+    width: 150px;
+    object-fit: cover;
+  }
+
+  img.user {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00ffff;
+  }
+}
+.pagination {
+  font-size: 1.6rem;
+}

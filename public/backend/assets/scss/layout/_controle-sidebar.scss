@@ -1,0 +1,123 @@
+.control-sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  right: -250px;
+  top: 80px;
+  z-index: 100;
+  transition: right 0.3s ease;
+  &.open {
+    right: 0;
+  }
+  &__title {
+    text-transform: capitalize;
+    border-bottom: 1px solid #383838;
+    padding: 0 0 10px;
+  }
+}
+
+.control-toggle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 28%;
+  left: -40px;
+  background-color: var(--orange);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  i {
+    font-size: 2.0rem;
+  }
+}
+
+.style-switcher-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.theme-colors button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 0.5rem;
+  position: relative;
+  &::before {
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  &.active::before {
+    opacity: 1;
+  }
+}
+
+.theme-colors .color-1 {
+  background-color: rgb(13,110,253);  
+}
+.theme-colors .color-2 {
+  background-color: rgb(108,117,125);  
+}
+.theme-colors .color-3 {
+  background-color: rgb(25,135,84);  
+}
+.theme-colors .color-4 {
+  background-color: rgb(17,202,240);  
+}
+.theme-colors .color-5 {
+  background-color: rgb(255,192,8);  
+}
+.theme-colors .color-6 {
+  background-color: rgb(220,53,69);  
+}
+.theme-colors .color-7 {
+  background-color: rgb(248,249,250);  
+}
+.theme-colors .color-8 {
+  background-color: rgb(33,37,41);  
+}
+.theme-colors .color-9 {
+  background-color: var(--indigo);  
+}
+.theme-colors .color-10 {
+  background-color: var(--lightblue);  
+}
+.theme-colors .color-11 {
+  background-color: var(--navy);  
+}
+.theme-colors .color-12 {
+  background-color: var(--purple);  
+}
+.theme-colors .color-13 {
+  background-color: var(--fuchsia);  
+}
+.theme-colors .color-14 {
+  background-color: var(--pink);  
+}
+.theme-colors .color-15 {
+  background-color: var(--maroon);  
+}
+.theme-colors .color-16 {
+  background-color: var(--lime);  
+}
+.theme-colors .color-17 {
+  background-color: var(--teal);  
+}
+.theme-colors .color-18 {
+  background-color: var(--olive);  
+}
+

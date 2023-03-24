@@ -18,19 +18,31 @@ class VendorSeeder extends Seeder
     {
         DB::table('vendors')->insert([
             [
-                'name' => 'test1',
+                'username' => 'test1',
+                'lastname' => '鈴木',
+                'firstname' => '太郎',
+                'lastname_kana' => 'スズキ',
+                'firstname_kana' => 'タロウ',
                 'email' => 'test1@test.com',
                 'password' => Hash::make('password123'),
                 'created_at' => '2021/01/01 11:11:11'
             ],
             [
-                'name' => 'test2',
+                'username' => 'test2',
+                'lastname' => '佐藤',
+                'firstname' => '次郎',
+                'lastname_kana' => 'サトウ',
+                'firstname_kana' => 'ジロウ',
                 'email' => 'test2@test.com',
                 'password' => Hash::make('password123'),
                 'created_at' => '2021/01/01 11:11:11'
             ],
             [
-                'name' => 'test3',
+                'username' => 'test3',
+                'lastname' => '山本',
+                'firstname' => '和子',
+                'lastname_kana' => 'ヤマモト',
+                'firstname_kana' => 'カズコ',
                 'email' => 'test3@test.com',
                 'password' => Hash::make('password123'),
                 'created_at' => '2021/01/01 11:11:11'

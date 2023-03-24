@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             VendorSeeder::class,
             CompanySeeder::class,
+            ClubSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 

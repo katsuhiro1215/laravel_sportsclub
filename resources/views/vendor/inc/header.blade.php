@@ -29,7 +29,7 @@
             alt=""
             class="rounded-circle header-profile-user"
           />
-          <span class="d-inline-block align-middle ms-1">Kakoi</span>
+          <span class="d-inline-block align-middle ms-1">{{ Auth::user()->name }}</span>
           <i
             class="mdi mdi-chevron-down align-middle d-inline-block"
           ></i>

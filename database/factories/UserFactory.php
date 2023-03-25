@@ -20,7 +20,7 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'usertype' => fake()->randomElement(['Customer', 'Member']),
+            'usertype' => fake()->randomElement(['Customer', 'Student', 'Member']),
             'username' => fake()->userName(),
             'lastname' => fake()->lastName(),
             'firstname' => fake()->firstName(),
@@ -29,6 +29,7 @@ class UserFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'profile_photo_path' => fake()->url(),
             'phone_number' => fake()->phoneNumber(),
             'mobile_number' => fake()->phoneNumber(),
             'birth' => fake()->dateTimeBetween('2005-01-01', '2020-12-31'),
@@ -42,6 +43,7 @@ class UserFactory extends Factory
             'father_phone_number' => fake()->phoneNumber(),
             'mother_name' => fake()->name(),
             'mother_phone_number' => fake()->phoneNumber(),
+            'information' => fake()->realText(),
             'remember_token' => Str::random(10),
         ];
     }

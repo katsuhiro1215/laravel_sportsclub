@@ -42,8 +42,8 @@
                                         新規作成
                                     </a>
                                     <a href="{{ route('vendor.expired_user.index') }}"
-                                        class="btn btn-success btn-lg border-rounded">
-                                        <i class="fas fa-plus"></i>
+                                        class="btn btn-secondary btn-lg border-rounded">
+                                        <i class="fas fa-trash"></i>
                                         削除したUser
                                     </a>
                                 </div>

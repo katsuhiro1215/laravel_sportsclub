@@ -57,7 +57,7 @@
                                         <div class="form-group">
                                             <label for="image" class="form-label">写真</label>
                                             <input type="file" name="logo_photo_path"
-                                                class="form-control" id="image" value="" />
+                                                class="form-control" id="image" value=""/>
                                         </div>
                                     </div>
                                 </div>

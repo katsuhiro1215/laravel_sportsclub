@@ -147,12 +147,11 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                          <button type="submit" class="btn btn-app bg-warning">
-                            <i class="fas fa-save"></i>編集する
-                        </button>
+                            <button type="submit" class="btn btn-app bg-warning">
+                                <i class="fas fa-save"></i>編集する
+                            </button>
                         </div>
                     </div>
-            </div>
     </section>
     <!-- Section Body End -->
     <!-- Section Footer Start -->

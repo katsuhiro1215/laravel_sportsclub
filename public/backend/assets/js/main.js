@@ -27,6 +27,19 @@ $(document).ready(function() {
 });
 
 /*******************************
+ *  画像検知
+******************************** */
+$(document).ready(function () {
+  $('#image').change(function(e) {
+    let reader = new FileReader();
+    reader.onload = function(e) {
+      $('#showImage').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files['0']);
+  });
+})
+
+/*******************************
  *  郵便番号から住所取得(API)
 ******************************** */
 function zipcode() {
@@ -128,156 +141,26 @@ function postEditor() {
 postEditor();
 
 // Sweet Alert
-$(function() {
-  var Dialog = Swal.mixin({
-    showConfirmButton: false,
-    timer: 3000
-  });
-
-  $('.swalDefaultSuccess').click(function() {
-    Dialog.fire({
-      icon: 'success',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.swalDefaultInfo').click(function() {
-    Dialog.fire({
-      icon: 'info',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.swalDefaultError').click(function() {
-    Dialog.fire({
-      icon: 'error',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.swalDefaultWarning').click(function() {
-    Dialog.fire({
-      icon: 'warning',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.swalDefaultQuestion').click(function() {
-    Dialog.fire({
-      icon: 'question',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-
-  $('.toastrDefaultSuccess').click(function() {
-    toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-  });
-  $('.toastrDefaultInfo').click(function() {
-    toastr.info('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-  });
-  $('.toastrDefaultError').click(function() {
-    toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-  });
-  $('.toastrDefaultWarning').click(function() {
-    toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-  });
-
-  $('.toastsDefaultDefault').click(function() {
-    $(document).Toasts('create', {
-      title: 'Toast Title',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultTopLeft').click(function() {
-    $(document).Toasts('create', {
-      title: 'Toast Title',
-      position: 'topLeft',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultBottomRight').click(function() {
-    $(document).Toasts('create', {
-      title: 'Toast Title',
-      position: 'bottomRight',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultBottomLeft').click(function() {
-    $(document).Toasts('create', {
-      title: 'Toast Title',
-      position: 'bottomLeft',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultAutohide').click(function() {
-    $(document).Toasts('create', {
-      title: 'Toast Title',
-      autohide: true,
-      delay: 750,
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultNotFixed').click(function() {
-    $(document).Toasts('create', {
-      title: 'Toast Title',
-      fixed: false,
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultFull').click(function() {
-    $(document).Toasts('create', {
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-      title: 'Toast Title',
-      subtitle: 'Subtitle',
-      icon: 'fas fa-envelope fa-lg',
-    })
-  });
-  $('.toastsDefaultFullImage').click(function() {
-    $(document).Toasts('create', {
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-      title: 'Toast Title',
-      subtitle: 'Subtitle',
-      image: '../../dist/img/user3-128x128.jpg',
-      imageAlt: 'User Picture',
-    })
-  });
-  $('.toastsDefaultSuccess').click(function() {
-    $(document).Toasts('create', {
-      class: 'bg-success',
-      title: 'Toast Title',
-      subtitle: 'Subtitle',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultInfo').click(function() {
-    $(document).Toasts('create', {
-      class: 'bg-info',
-      title: 'Toast Title',
-      subtitle: 'Subtitle',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultWarning').click(function() {
-    $(document).Toasts('create', {
-      class: 'bg-warning',
-      title: 'Toast Title',
-      subtitle: 'Subtitle',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultDanger').click(function() {
-    $(document).Toasts('create', {
-      class: 'bg-danger',
-      title: 'Toast Title',
-      subtitle: 'Subtitle',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-  $('.toastsDefaultMaroon').click(function() {
-    $(document).Toasts('create', {
-      class: 'bg-maroon',
-      title: 'Toast Title',
-      subtitle: 'Subtitle',
-      body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    })
-  });
-});
+function deletePost(e) {
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+      document.getElementById('delete_' + e.dataset.id).submit();
+    }
+  })
+}
 
 // jQuery Toastr
 $(document).ready(function () {

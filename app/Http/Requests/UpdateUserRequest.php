@@ -3,10 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rules;
 use App\Models\User;
 
-class StoreUserRequest extends FormRequest
+class UpdateUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -33,7 +32,6 @@ class StoreUserRequest extends FormRequest
             'lastname_kana' => ['required', 'string', 'max:50'],
             'firstname_kana' => ['required', 'string', 'max:50'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'birth' => ['required', 'date'],
             'gender' => ['max:5'],
             'phone_number' => ['string', 'max:15'],

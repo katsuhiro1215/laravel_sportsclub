@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClubController;
 use App\Http\Controllers\Vendor\UserController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +32,14 @@ Route::middleware('auth:vendor')->group(function () {
     Route::resource('/club', ClubController::class);
     // User Route
     Route::resource('/user', UserController::class);
-
     Route::prefix('expired_user')->group(function() {
         Route::get('index', [UserController::class, 'expiredUserIndex'])->name('expired_user.index');
         Route::get('restore/{user}', [UserController::class, 'expiredUserRestore'])->name('expired_user.restore');
         Route::post('destroy/{user}', [UserController::class, 'expiredUserDestroy'])->name('expired_user.destroy');
     });
+    // Event Route
+    Route::get('events/past', [EventController::class, 'past'])->name('events.past');
+    Route::resource('events', EventController::class);
 });
 
 

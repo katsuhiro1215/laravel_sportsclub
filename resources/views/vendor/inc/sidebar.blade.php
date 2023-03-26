@@ -36,6 +36,24 @@
       </ul>
     </nav>
 
+    <nav class="sidebar-nav mb-2">
+      <h3 class="sidebar-title">Event</h3>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a href="{{ route('vendor.event.index') }}" class="nav-link">
+            <i class="fa-solid fa-palette"></i>
+            <p>Event一覧</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('vendor.event.create') }}" class="nav-link">
+            <i class="fa-solid fa-palette"></i>
+            <p>Event新規作成</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <nav class="sidebar-nav mt-2">
       <ul class="nav nav-pills flex-column flex-end">
         <li class="nav-item">

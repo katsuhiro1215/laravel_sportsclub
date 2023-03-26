@@ -65,14 +65,15 @@
                                 <div class="col-3">
                                     <div class="row mb-4">
                                         <div class="text-center">
-                                            <img src="{{ (!empty($user->profile_photo_path)) ? url('upload/user_images/'.$user->profile_photo_path) : url('upload/no-image.png') }}" alt="" class="img-thumbnail profile-img mt-4" id="showImage">
-                                          </div>
+                                            <img src="{{ !empty($user->profile_photo_path) ? url('upload/user_images/' . $user->profile_photo_path) : url('upload/no-image.png') }}"
+                                                alt="" class="img-thumbnail profile-img mt-4" id="showImage">
+                                        </div>
                                     </div>
                                     <div class="row mb-4">
                                         <div class="form-group">
                                             <label for="image" class="form-label">写真</label>
-                                            <input type="file" name="profile_photo_path"
-                                                class="form-control" id="image" value="" />
+                                            <input type="file" name="profile_photo_path" class="form-control"
+                                                id="image" value="" />
                                         </div>
                                     </div>
                                 </div>
@@ -125,8 +126,8 @@
                                                 <label for="firstname" class="form-label">名前(名)<span
                                                         class="text-danger ps-2"><i
                                                             class="fa-solid fa-asterisk"></i>必須</span></label>
-                                                <input type="text" name="firstname" class="form-control" id="firstname"
-                                                    value="{{ old('firstname') }}" required>
+                                                <input type="text" name="firstname" class="form-control"
+                                                    id="firstname" value="{{ old('firstname') }}" required>
                                             </div>
                                         </div>
                                     </div>
@@ -226,12 +227,12 @@
                                                 <div>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="gender"
-                                                            id="male" value="">
+                                                            id="male" value="{{ old('gender') }}" checked>
                                                         <label class="form-check-label" for="male">男</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="gender"
-                                                            id="female" value="">
+                                                            id="female" value="{{ old('gender') }}">
                                                         <label class="form-check-label" for="female">女</label>
                                                     </div>
                                                 </div>

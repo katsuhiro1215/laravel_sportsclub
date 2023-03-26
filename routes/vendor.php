@@ -38,8 +38,8 @@ Route::middleware('auth:vendor')->group(function () {
         Route::post('destroy/{user}', [UserController::class, 'expiredUserDestroy'])->name('expired_user.destroy');
     });
     // Event Route
-    Route::get('events/past', [EventController::class, 'past'])->name('events.past');
-    Route::resource('events', EventController::class);
+    Route::get('event/past', [EventController::class, 'past'])->name('events.past');
+    Route::resource('event', EventController::class);
 });
 
 

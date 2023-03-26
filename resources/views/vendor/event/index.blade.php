@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h1 class="content-header__title">User管理</h1>
+                    <h1 class="content-header__title">Event管理</h1>
                 </div>
                 <div class="col-md-6">
                     <nav aria-label="breadcrumb">
@@ -15,7 +15,7 @@
                                 <a href="/">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                User
+                                Event
                             </li>
                         </ol>
                     </nav>
@@ -32,19 +32,14 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-md-6">
-                                <h2>User一覧</h2>
+                                <h2>Event一覧</h2>
                             </div>
                             <div class="col-md-6">
                                 <div class="float-end">
-                                    <a href="{{ route('vendor.user.create') }}"
+                                    <a href="{{ route('vendor.event.create') }}"
                                         class="btn btn-success btn-lg border-rounded">
                                         <i class="fas fa-plus"></i>
                                         新規作成
-                                    </a>
-                                    <a href="{{ route('vendor.expired_user.index') }}"
-                                        class="btn btn-secondary btn-lg border-rounded">
-                                        <i class="fas fa-trash"></i>
-                                        削除したUser
                                     </a>
                                 </div>
                             </div>
@@ -57,40 +52,48 @@
                                     <thead>
                                         <tr>
                                             <th class="sorting sorting_asc" tabindex="0" rowspan="1" colspan="1"
-                                                aria-sort="ascending">
-                                                SL
-                                            </th>
-                                            <th class="sorting">会員種別</th>
-                                            <th class="sorting">名前</th>
-                                            <th class="sorting">フリガナ</th>
-                                            <th class="sorting">電話番号</th>
-                                            <th class="sorting">メールアドレス</th>
+                                            aria-sort="ascending">
+                                            SL
+                                        </th>
+                                            <th class="sorting">イベント名</th>
+                                            <th class="sorting">開始日時</th>
+                                            <th class="sorting">終了日時</th>
+                                            <th class="sorting">予約人数</th>
+                                            <th class="sorting">定員</th>
+                                            <th class="sorting">表示・非表示</th>
                                             <th>操作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
-                                        @foreach ($users as $key => $user)
+                                        @foreach ($events as $key => $event)
                                             <tr>
                                                 <td>{{ $key + 1 }}</td>
-                                                <td>{{ $user->usertype }}</td>
-                                                <td>{{ $user->lastname }} {{ $user->firstname }}</td>
-                                                <td>{{ $user->lastname_kana }} {{ $user->firstname_kana }}</td>
-                                                <td>{{ $user->phone_number }}</td>
-                                                <td>{{ $user->email }}</td>
+                                                <td>{{ $event->name }}</td>
+                                                <td>{{ $event->start_date }}</td>
+                                                <td>{{ $event->end_date }}</td>
                                                 <td>
-                                                    <button type="button" onclick="location.href='{{ route('vendor.user.show', ['user' => $user->id]) }}'" class="btn btn-lg btn-info border-rounded">
+                                                    @if (is_null($event->number_of_people))
+                                                        0
+                                                    @else
+                                                        {{ $event->number_of_people }}
+                                                    @endif
+                                                </td>
+                                                <td>{{ $event->max_people }}</td>
+                                                <td>{{ $event->is_visible }}</td>
+                                                <td>
+                                                    <button type="button" onclick="location.href='{{ route('vendor.event.show', ['event' => $event->id]) }}'" class="btn btn-lg btn-info border-rounded">
                                                         <i class="fas fa-barcode"></i>
                                                         詳細
                                                     </button>
-                                                    <button type="button" onclick="location.href='{{ route('vendor.user.edit', ['user' => $user->id]) }}'" class="btn btn-lg btn-warning border-rounded">
+                                                    <button type="button" onclick="location.href='{{ route('vendor.event.edit', ['event' => $event->id]) }}'" class="btn btn-lg btn-warning border-rounded">
                                                         <i class="fas fa-edit"></i>
                                                         編集
                                                     </button>
-                                                    <form id="delete_{{ $user->id }}" method="POST" action="{{ route('vendor.user.destroy', ['user' => $user->id]) }}" style="display: inline;">
+                                                    <form id="delete_{{ $event->id }}" method="POST" action="{{ route('vendor.event.destroy', ['event' => $event->id]) }}" style="display: inline;">
                                                         @csrf
                                                         @method('delete')
-                                                        <a href="#" data-id="{{ $user->id }}" onclick="deletePost(this)" class="btn btn-lg btn-danger border-rounded">
+                                                        <a href="#" data-id="{{ $event->id }}" onclick="deletePost(this)" class="btn btn-lg btn-danger border-rounded">
                                                             <i class="fas fa-trash"></i>
                                                             削除
                                                         </a>
@@ -103,21 +106,6 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-5">
-                            </div>
-                            <div class="col-sm-12 col-md-7">
-                              <nav aria-label="Page navigation" class="dataTables_paginate paging_simple_numbers">
-                                <ul class="pagination float-end">
-                                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                              </nav>
-                            </div>
-                          </div>
                     </div>
                 </div>
             </div>
